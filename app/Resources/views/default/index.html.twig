@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        {% include 'default/header.html.twig' %}
+
+        {% include 'default/slides.html.twig' %}
+
+        {% include 'default/categories.html.twig' %}
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section_heading text-center">
+                        <h2>New Arrivals</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="karl-projects-menu mb-100">
+            <div class="text-center portfolio-menu">
+                <button class="btn active" data-filter="*">ALL</button>
+                <button class="btn" data-filter=".women">WOMAN</button>
+                <button class="btn" data-filter=".man">MAN</button>
+                <button class="btn" data-filter=".access">ACCESSORIES</button>
+                <button class="btn" data-filter=".shoes">shoes</button>
+                <button class="btn" data-filter=".tt">tt</button>
+            </div>
+        </div>
+
+        {% include 'default/products.html.twig' %}
+
+        {% include 'default/footer.html.twig' %}
+    </div>
+{% endblock %}
