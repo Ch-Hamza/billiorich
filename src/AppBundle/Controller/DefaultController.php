@@ -65,8 +65,8 @@ class DefaultController extends Controller
         $queryBuilder = $em->getRepository(Product::class)->createQueryBuilder('p');
         $queryBuilder->where('p.enabled = true');
         if($request->query->getAlnum('category')) {
-            $queryBuilder->where('p.category LIKE :category')
-                ->setParameter('category', '%'.$request->query->getAlnum('category').'%');
+            $queryBuilder->where('p.category = :category')
+                ->setParameter('category', $request->query->getAlnum('category'));
         }
 
         $query = $queryBuilder->getQuery();

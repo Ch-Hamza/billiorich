@@ -23,9 +23,20 @@ class ProductType extends AbstractType
             ->add('name', TextType::class)
             ->add('category', ChoiceType::class, array(
                 'choices' => array(
-                    'T-Shirt' => 'T-Shirt',
-                    'Hat' => 'Hat',
-                    'Shoes' => 'Shoes',
+                    'TShirt' => 'TShirt',
+                    'Casquettes' => 'Casquettes',
+                    'Mocassin' => 'Mocassin',
+                    'Polo' => 'Polo',
+                    'Chemises' => 'Chemises',
+                    'Jeans' => 'Jeans',
+                ),
+                'placeholder' => 'Select',
+            ))
+            ->add('filter', ChoiceType::class, array(
+                'choices' => array(
+                    'women' => 'women',
+                    'men' => 'men',
+                    'access' => 'access',
                 ),
                 'placeholder' => 'Select',
             ))
