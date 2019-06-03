@@ -17,28 +17,48 @@ class PersonalInfoType extends AbstractType
         $builder
             ->add('customerFirstName', TextType::class, array(
                 'required' => true,
+                'attr' => array(
+                    'label' => 'Nom',
+                ),
             ))
             ->add('customerLastName', TextType::class, array(
                 'required' => true,
+                'attr' => array(
+                    'label' => 'Prenom',
+                ),
             ))
-            ->add('customerCompany', TextType::class)
             ->add('customerEmail', TextType::class, array(
                 'required' => true,
+                'attr' => array(
+                    'label' => 'Email',
+                ),
             ))
             ->add('customerPhone', NumberType::class, array(
                 'required' => true,
+                'attr' => array(
+                    'label' => 'Téléphone',
+                ),
             ))
             ->add('customerCity', TextType::class, array(
                 'required' => true,
+                'attr' => array(
+                    'label' => 'Ville',
+                ),
             ))
             ->add('customerAddress', TextType::class, array(
                 'required' => true,
+                'attr' => array(
+                    'label' => 'adresse',
+                ),
             ))
             ->add('postalCode', NumberType::class, array(
                 'required' => true,
+                'attr' => array(
+                    'label' => 'Code postal',
+                ),
             ))
             ->add('save',  SubmitType::class, array(
-                'label' => 'Place Order',
+                'label' => 'Placer Commande',
                 'attr' => array(
                     'class' => 'btn karl-checkout-btn'
                 )

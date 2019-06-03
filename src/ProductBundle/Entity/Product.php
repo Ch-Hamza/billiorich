@@ -41,13 +41,6 @@ class Product
     /**
      * @var string
      *
-     * @ORM\Column(name="filter", type="string", length=255)
-     */
-    private $filter;
-
-    /**
-     * @var string
-     *
      * @ORM\Column(name="description", type="text")
      */
     private $description;
@@ -395,22 +388,6 @@ class Product
     public function setImageFile3($imageFile3)
     {
         $this->imageFile3 = $imageFile3;
-    }
-
-    /**
-     * @return string
-     */
-    public function getFilter()
-    {
-        return $this->filter;
-    }
-
-    /**
-     * @param string $filter
-     */
-    public function setFilter($filter)
-    {
-        $this->filter = $filter;
     }
 }
 

@@ -41,3 +41,8 @@
 .icon-3xl i {
     font-size: 32px
 }
+
+.send-button{
+    background-color: black;
+    color: white;
+}

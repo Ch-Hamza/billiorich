@@ -49,19 +49,6 @@ class OrderInfo
     private $customerLastName;
 
     /**
-     * @var string
-     *
-     * @Assert\NotBlank()
-     * @Assert\Regex(
-     *     pattern="/^[a-zA-Z]*$/",
-     *     message="Invalid Company Name",
-     * )
-     *
-     * @ORM\Column(name="customerCompany", type="string", length=255)
-     */
-    private $customerCompany;
-
-    /**
      * @var int
      *
      * @Assert\Regex(
@@ -226,22 +213,6 @@ class OrderInfo
     public function getCustomerEmail()
     {
         return $this->customerEmail;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCustomerCompany()
-    {
-        return $this->customerCompany;
-    }
-
-    /**
-     * @param string $customerCompany
-     */
-    public function setCustomerCompany($customerCompany)
-    {
-        $this->customerCompany = $customerCompany;
     }
 
     /**

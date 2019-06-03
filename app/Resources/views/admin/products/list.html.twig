@@ -50,7 +50,7 @@
                                 <td>{{ p.name }}</td>
                                 <td>{{ p.price }}</td>
                                 <td style="max-width: 200px !important;word-wrap: break-word;">{{ p.description }}</td>
-                                <td><img src="{{ vich_uploader_asset(p,'imageFile') }}" alt="" style="width: 150px;height: 150px;"></td>
+                                <td><img src="{{ vich_uploader_asset(p,'imageFile') }}" alt="" style="width: 150px;height: 150px;object-fit: cover;"></td>
                                 <td>
                                     <ul class="icons-list mt-15">
                                         <li><a href="{{ path('highlight_product_page', {'id': p.id}) }}" data-popup="tooltip" title="Highlight Product"><i class="icon-check"></i></a></li>
